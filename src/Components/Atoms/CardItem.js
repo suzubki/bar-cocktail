@@ -11,7 +11,6 @@ const CardItem = ({ id, name, image }) => {
   const toggle = () => setModal(!modal)
 
   // Manejador de eventos
-
   const [cocktailById, setCocktailById] = useState()
 
   function handleDetails(){
