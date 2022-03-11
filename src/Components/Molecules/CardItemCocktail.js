@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import { Card, CardBody, CardTitle, CardImg, Button} from 'reactstrap'
+import { Card, CardBody, CardImg, CardTitle, Button} from 'reactstrap'
+
+import './CardItemCocktail.scss'
+
 import getCocktailsById from '../../Helpers/getCocktailById'
-import './CardItem.css'
 import ItemModal from './ItemModal'
 
-const CardItem = ({ id, name, image }) => {
+const CardItemCocktail = ({ id, name, image }) => {
 
   // Activar el modal
   const [modal, setModal] = useState(false)
@@ -23,19 +25,13 @@ const CardItem = ({ id, name, image }) => {
     <>
       <Card id={id} className='card__item' >
         <CardBody>
-          <CardImg
-            alt={name}
-            src={image}
-            top
-          />
-          <CardTitle tag="h5">
-            {name}
-          </CardTitle>
+          <CardImg src={image} alt={name} />
+          <CardTitle tag="h5" className='text-white mt-2'>{name}</CardTitle>
           <Button color='primary' onClick={()=> {
             toggle()
             handleDetails()
           }} >
-            Button
+            Details
           </Button>
         </CardBody>
       </Card>
@@ -50,4 +46,4 @@ const CardItem = ({ id, name, image }) => {
   )
 }
 
-export default CardItem
+export default CardItemCocktail

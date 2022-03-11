@@ -1,10 +1,11 @@
-import Menu from "./Components/Organism/Menu";
+import Main from "./Components/Pages/Main";
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
     <div>
-      <Menu />
+      <Main />
     </div>
   );
 }
